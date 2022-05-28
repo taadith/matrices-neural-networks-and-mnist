@@ -32,5 +32,5 @@ void randomizeMatrix(Matrix *m, int n);
 //expects an M x 1 matrix 'm' and returns the index containing the max value of 'm'
 int argMaxOfMatrix(Matrix* m);
 
-
+//flattens matrix to column vector if 'axis' is 0 OR to the row vector if 'axis' is 1
 Matrix* flattenMatrix(Matrix* m, int axis);
