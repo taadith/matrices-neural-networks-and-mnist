@@ -14,6 +14,4 @@ The matrix header and C files outlines the functions for creating a matrix, free
 2. To compile **operations.c**, type the bash command `cc -g -o ops operations.c matrix.c -lm`
 
 ## Goals
-1. Refactor the multiply function so that it has a stride of 1 for better locality while traversing the matrices
-2. Implement a determinant function
-3. Implement an inverse function
+1. Rewrite all code and implement in Rust
