@@ -6,7 +6,7 @@
 #define MAXCHAR 100
 
 //creates a matrix and allocates it on heap
-Matrix* createMatrix(int row, int col) {
+Matrix* newMatrix(int row, int col) {
 	//initializing matrix and allocating on heap
 	Matrix *matrix = malloc(sizeof(Matrix));
 	
@@ -55,7 +55,7 @@ void printMatrix(Matrix *m) {
 
 //creates a deep copy of the matrix 'm'
 Matrix * copyMatrix(Matrix* m) {
-	Matrix* mat = createMatrix(m -> rows, m -> cols);
+	Matrix* mat = newMatrix(m -> rows, m -> cols);
 	
 	for (int i = 0; i < m-> rows; i++ ) {
 		for (int j = 0; i < m -> cols; j++) {
@@ -94,7 +94,7 @@ Matrix* loadMatrix(char* stringFile) {
 	fgets(entry, MAXCHAR, file);
 	int cols = atoi(entry);
 	
-	Matrix *m = createMatrix(rows,cols);
+	Matrix *m = newMatrix(rows,cols);
 	for (int i = 0; i < m -> rows; i++) {
 		for (int j = 0; j < m -> cols; j++) {
 			fgets(entry, MAXCHAR, file);
@@ -102,8 +102,10 @@ Matrix* loadMatrix(char* stringFile) {
 		}
 	}
 	
-	printf("Successfully loaded matrix from %s\n\n", stringFile);
+	printf("Successfully loaded matrix from '%s':\n\n", stringFile);
 	fclose(file);
+	
+	printMatrix(m);
 	
 	return m;
 }
@@ -142,20 +144,27 @@ int argMaxOfMatrix(Matrix* m) {
 	return maxIndex;
 }
 
-int main() { 
-	Matrix *m = createMatrix(2,2);
-	fillMatrix(m,1);
-	printMatrix(m);
-	
-	saveMatrix(m,"matrix_example.txt");
-	Matrix *m1 = loadMatrix("matrix_example.txt");
-	printMatrix(m1);
-	
-	remove("matrix_example.txt");
-	
-	freeMatrix(m);
-	freeMatrix(m1);
-	
-	return 0; 
+//flattens matrix to column vector if 'axis' is 0 OR to the row vector if 'axis' is 1
+Matrix* flattenMatrix(Matrix* m, int axis) {
+	//Axis = 0 -> Column Vector, Axis = 1 -> Row Vector
+	Matrix* mat;
+	if (axis == 0) {
+		mat = newMatrix((m -> rows)*(m -> cols),1);
+	} else if (axis ==1) {
+		mat = newMatrix(1, (m -> rows)*(m -> cols));
+	} else {
+		printf("Argument to flattenMatrix must be 0 or 1");
+		exit(EXIT_FAILURE);
+	}
+	for (int i = 0; i < m -> rows; i++) {
+		for (int j = 0; j < m -> cols; j++) {
+			if (axis == 0)
+				mat -> entries[i * (m -> cols) + j][0] = m -> entries[i][j];
+			else if (axis ==1)
+				mat -> entries[0][i * (m -> cols) + j] = m -> entries[i][j];
+		}
+	}
+	return mat;
 }
+
 
