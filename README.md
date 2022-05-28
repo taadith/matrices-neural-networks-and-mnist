@@ -3,8 +3,8 @@
 ### Followed @markkraay GitHub project and their [YouTube video](https://www.youtube.com/watch?v=ReOxVMxS83o&amp;t=2s) for a general set-up and then expanded on their implementation to fully incorporate all operations in linear algebra!
 
 ## **matrix._** files
-### matrix.h:
-The matrix header file
+The matrix header and C files outlines the functions for creating a matrix, freeing a matrix, printing a matrix, etc.
+
 ## operations._ files
 ***TODO for later***
 ## Compilation:
