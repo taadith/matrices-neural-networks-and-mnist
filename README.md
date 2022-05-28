@@ -1,5 +1,6 @@
 # Matrices Project
-## Expanding knowledge of matrices by following @markkraay GitHub project and their [YouTube video](https://www.youtube.com/watch?v=ReOxVMxS83o&amp;t=2s)
+## Expanding knowledge of matrices by implementing in C!
+### Followed @markkraay GitHub project and their [YouTube video](https://www.youtube.com/watch?v=ReOxVMxS83o&amp;t=2s) for a general set-up and then expanded on their implementation to fully incorporate all operations in linear algebra!
 
 ## matrix._ files
 ***TODO for later***
