@@ -21,9 +21,7 @@ The matrix header and C files outline and define the functions for
 6. creating a copy of a matrix
 7. saving a matrix to a text file
 8. loading a matrix from a text file
-...
 
-### operations._ files
 ### **operations._** files
 The operations header and C files outline and define the functions for
 1. adding two matrices together
