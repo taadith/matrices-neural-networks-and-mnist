@@ -1,5 +1,5 @@
-# Matrices Project
-## Expanding knowledge of matrices by implementing in C and Rust!
+# Matrices Project (will be expanded to neural networks in later iterations)
+## Expanding knowledge of matrices by implementing in C!
 ### Followed markkraay's GitHub project and their [YouTube video](https://www.youtube.com/watch?v=ReOxVMxS83o&amp;t=2s) for a general set-up and then expanded on their implementation to fully incorporate all operations in linear algebra!
 
 ## C Files:
@@ -32,28 +32,3 @@ The operations header and C files outline and define the functions for
 #### The system used for compilation was the Ubuntu on Windows application (WSL)
 1. To compile **matrix.c**, type the bash command `cc -g -o matrix matrix.c`
 2. To compile **operations.c**, type the bash command `cc -g -o ops operations.c matrix.c -lm`
-
-## Rust Files:
-
-### Goals:
-1. Implement a determinant function
-2. Implement a transpose function
-3. Implement an inverse function
-
-### src/main.rs file
-The main file contains the functions for 
-1. creating a matrix,
-2. printing its column and row vectors
-3. printing a matrix
-4. copying a matrix
-
-The main file also contains overloaded operators for
-1. adding two matrices together
-2. subtracting one matrix from another
-3. scalar multiplication
-4. matrix multiplication
-
-### Compilation
-#### The system used for compilation was the Ubuntu on Windows application (WSL)
-1. To compile the package, type the bash command "cargo build" or "cargo check"
-2. To run the package, type the bash command "cargo run"
