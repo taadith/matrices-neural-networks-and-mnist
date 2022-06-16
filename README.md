@@ -1,5 +1,5 @@
 # Matrices Project (will be expanded to neural networks in later iterations)
-## Expanding knowledge of matrices by implementing in C!
+## Expanding knowledge of matrices by implementing in C (and C++ very soon)!
 ### Followed markkraay's GitHub project and their [YouTube video](https://www.youtube.com/watch?v=ReOxVMxS83o&amp;t=2s) for a general set-up and then expanded on their implementation to fully incorporate all operations in linear algebra!
 
 ## C Files:
