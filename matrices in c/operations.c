@@ -66,9 +66,11 @@ int main() {
 	
 	Matrix *m2 = loadMatrix("matrix2-2x4.txt");
 	
-	printMatrix(multiply(m1,m2));
+	Matrix *m3 = multiply(m1,m2);
 	
+	printMatrix(m3);
 	
+	freeMatrix(m3);
 	freeMatrix(m2);
 	freeMatrix(m1);
 	return 0; 

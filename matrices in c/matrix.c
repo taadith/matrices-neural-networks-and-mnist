@@ -166,5 +166,3 @@ Matrix* flattenMatrix(Matrix* m, int axis) {
 	}
 	return mat;
 }
-
-
